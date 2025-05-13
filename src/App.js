@@ -1,22 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import logo from './pinaka_logo-web-transparent.png'; // Make sure the extension matches your file
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={logo} alt="Pinakastra Logo" className="App-logo" />
+        <h1>Welcome to Pinakastra</h1>
+        <p>Building India's Private Cloud Infrastructure</p>
       </header>
     </div>
   );

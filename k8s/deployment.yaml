@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pinakastra-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pinakastra-web
+  template:
+    metadata:
+      labels:
+        app: pinakastra-web
+    spec:
+      containers:
+      - name: pinakastra-web
+        image: deepakprajapati764/pinakastra-web:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pinakastra-web-service
+spec:
+  selector:
+    app: pinakastra-web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
